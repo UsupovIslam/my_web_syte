@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    
+  <div class="container-fluid bg-3 text-center">    
+    <h2>Fruits list</h2><br>
+    <div class="row">
+        {% for f in fruits %}
+      <div class="col-sm-3">
+        <p>{{ f.name }}</p>
+        <img src="{{ f.img.url }}" class="img-responsive" style="width:100%" alt="Image">
+        <p>{{ f.description }}</p>
+      </div>
+       {% endfor%}
+    </div>
+  </div><br>
+  
+  </div><br><br>
+
+  {% endblock%}
